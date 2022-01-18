@@ -1,0 +1,22 @@
+{
+  "name": "docker-intro-api",
+  "version": "1.0.0",
+  "description": "Introducao ao Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon .src/index"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "Guilherme Tosta",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql": "^2.18.1"
+  }
+}

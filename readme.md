@@ -34,3 +34,14 @@ docker exec -it mysql-container /bin/bash
 para criar um volume para o docker utiliza-se o comando run adicionando a TAG -v e informando a pasta local para ser utilizada como volume
 
 docker run -d -v "C:\Users\guilh\Documents\git\docker\api\db\data:/var/lib/mysql" --rm --name mysql-container mysql-image 
+
+para listar todas as configurações e detalhes do container rode o programa.
+
+docker inspect mysql-container
+
+foi criado o dockerfile para o node dentro de /api, buildado com o comando docker build e agora vamos rodar com o comando
+
+docker run -d -v "C:\Users\guilh\Documents\git\docker\api:/home/node/app" -p 9001:9001 --rm --name node-container node-image
+
+Unica Tag diferente é a -p que identifica as portas de HOST:CONTAINER, então a 9001 do nosso host vai estar exposta a 9001 do nosso CONTAINER
+____
